@@ -6,15 +6,18 @@ import { InventarioService } from '../../services/inventario.service';
   templateUrl: './inventario.component.html',
   styleUrls: ['./inventario.component.scss']
 })
-export class InventarioComponent  implements OnInit {
+export class InventarioComponent implements OnInit {
 
   constructor(private service: InventarioService){
 
   }
 
-  ngOnInit = () =>{
+  ngOnInit(){
+    // console.log("epa la arepa");
     this.service.getDispositivos().subscribe(res =>{
       console.log(res);
+    }, err => {
+      console.error(err);
     });
   }
 }

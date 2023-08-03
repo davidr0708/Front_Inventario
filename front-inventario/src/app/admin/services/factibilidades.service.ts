@@ -3,14 +3,12 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment.development';
 
-// const test = environment;
-
 @Injectable({
   providedIn: 'root'
 })
-export class InventarioService {
+export class FactibilidadesService {
 
-  uri: string = 'http://localhost:3000/inventario';
+  uri: string = 'http://localhost:3000/factibilidades';
   public httpOptions = {
     headers: new HttpHeaders({
       'Access-Control-Allow-Headers': 'Content-Type',
@@ -27,7 +25,7 @@ export class InventarioService {
 
   constructor(private http: HttpClient) { }
 
-  getDispositivos(): Observable<any> {
+  getFactibilidades(): Observable<any> {
     return this.http.get<any>(this.uri, this.httpOptions);
   } 
 }

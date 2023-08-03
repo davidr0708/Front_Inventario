@@ -1,16 +1,15 @@
 import { Router } from "express"
-// import { getInventario, postInventario, deleteInventario,putInventario } from "../controllers/inventario.controller.js"
 import { Dispositivos } from "../controllers/dispositivo.controller.js"
 
 const router = Router()
 
-const dispositivo = new Dispositivos()
+const controller = new Dispositivos()
 
-router.get('/', dispositivo.getHello)
-router.get('/dispositivo', dispositivo.getDispositivo)
-router.post('/dispositivo', dispositivo.postDispositivo)
-router.put('/dispositivo', dispositivo.deleteDispositivo)
-router.delete('/dispositivo', dispositivo.putDispositivo)
+// router.get('/', controller.getHello)
+router.get('/', controller.getDispositivo)
+router.post('/dispositivo', controller.postDispositivo)
+router.put('/dispositivo', controller.deleteDispositivo)
+router.delete('/dispositivo', controller.putDispositivo)
 
 
 
