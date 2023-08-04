@@ -28,4 +28,7 @@ export class FactibilidadesService {
   getFactibilidades(): Observable<any> {
     return this.http.get<any>(this.uri, this.httpOptions);
   } 
+  getCads(): Observable<any> {
+    return this.http.get<any>(this.uri + '/cad', this.httpOptions);
+  } 
 }

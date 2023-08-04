@@ -6,5 +6,6 @@ const router = Router()
 const controller = new Factibilidades()
 
 router.get('/', controller.getFactibilidades)
+router.get('/cad', controller.getCads)
 
 export default router

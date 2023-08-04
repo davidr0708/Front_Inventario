@@ -12,6 +12,8 @@ export class InventarioComponent implements OnInit {
 
   }
 
+  inventario: any = [];
+
   ngOnInit(){
     // console.log("epa la arepa");
     this.service.getDispositivos().subscribe(res =>{

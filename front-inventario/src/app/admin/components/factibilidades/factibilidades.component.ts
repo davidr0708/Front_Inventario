@@ -12,13 +12,25 @@ export class FactibilidadesComponent implements OnInit{
 
   }
 
-  datos: any = []
+  factibilidades: any = []
+  cads: any = []
 
   ngOnInit(){
-    // console.log("epa la arepa");
+    this.getCads()
+    this.getFactibilidades()
+  }
+
+  getFactibilidades(){
     this.service.getFactibilidades().subscribe(res =>{
-      this.datos = res;
-      console.log(this.datos);
+      this.factibilidades = res;
+    }, err => {
+      console.error(err);
+    });
+  }
+  
+  getCads(){
+    this.service.getCads().subscribe(res =>{
+      this.cads = res;
     }, err => {
       console.error(err);
     });
