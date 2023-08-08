@@ -1,1 +1,23 @@
-<router-outlet></router-outlet>
+<!-- <div class="wrapper">
+    <div class="sidebar" data-color="danger" data-background-color="white">
+        <app-side-bar></app-side-bar>
+    </div>
+    <div class="main-panel">
+        <router-outlet></router-outlet>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-auto bg-light sticky-top">
+            <app-side-bar></app-side-bar>
+        </div>
+        <div class="col-sm p-3 min-vh-100"> <!-- content -->
+            <div class="container">
+                <h2>Nombre modulo</h2>
+                <hr />
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
